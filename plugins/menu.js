@@ -18,7 +18,7 @@ module.exports = (sock) => {
         });
 
         const madeMenu = `
-╭─「 📜 ᴍᴇɴᴜ ᴏᴘᴛɪᴏɴꜱ 」 
+╭─「 📜 CXD MINI BOT 」 
 │ ⚙️ *MAIN COMMANDS*
 │   ➥ .menu
 │   ➥ .status
@@ -32,7 +32,7 @@ module.exports = (sock) => {
           mek.key.remoteJid,
           {
             image: {
-              url: "https://github.com/Mahii-Botz/Mahii-md-LOGO/blob/main/ChatGPT%20Image%20Apr%2021,%202025,%2005_32_50%20PM.png?raw=true",
+              url: "https://postimg.cc/hhNnXtQ0",
             },
             caption: madeMenu,
           },
