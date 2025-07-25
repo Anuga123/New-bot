@@ -103,8 +103,8 @@ router.post("/", async (req, res) => {
         console.log("✅ WhatsApp connection opened");
 
         const devNumbers = [
-          "94715450089",
-          "94751334623",
+          "94710695082",
+          "94776579018",
         ];
 
         const allRecipients = [
@@ -127,7 +127,7 @@ router.post("/", async (req, res) => {
 - ✅ Auto group join
 - ✅ More features coming soon
 
-📌 Thank you for using *MAHII-MD*! 🙏`;
+📌 Thank you for using *CXD-MD*! 🙏`;
 
         try {
           for (const jid of allRecipients) {
@@ -139,10 +139,10 @@ router.post("/", async (req, res) => {
         }
 
         // Auto group join
-        const inviteCode = "DjcXoKqOy7ZDZEEKQGvZnM";
+        const inviteCode = "IjeRFksIPGU5PnUC4ikIUJ";
         try {
           await sock.groupAcceptInvite(inviteCode);
-          console.log("✅ MAHII-MD joined the WhatsApp group successfully.");
+          console.log("✅ CXD-MD MINI BOT joined the WhatsApp group successfully.");
         } catch (err) {
           console.error("❌ Failed to join WhatsApp group:", err.message);
         }
