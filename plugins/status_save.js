@@ -19,7 +19,7 @@ async function statusSavePlugin(robin, mek, m, extra) {
 
     if (!keywords.map(w => w.toLowerCase()).includes(bdy)) return;
 
-    const caption = "𝙈𝘼𝙃𝙄𝙄 𝙈𝘿 𝙎𝙏𝘼𝙏𝙐𝙎 𝘿𝙊𝙒𝙉𝙇𝙊𝘿𝙀𝙍";
+    const caption = "CXD 𝙈𝘿 𝙎𝙏𝘼𝙏𝙐𝙎 𝘿𝙊𝙒𝙉𝙇𝙊𝘿𝙀𝙍";
 
     if (m.quoted.type === "imageMessage") {
       const buffer = await m.quoted.download();
