@@ -21,11 +21,11 @@ function removeFile(FilePath) {
 router.get("/", async (req, res) => {
   let num = req.query.number;
 
-  async function RobinPair() {
+  async function CyberAnuwhPair() {
     const { state, saveCreds } = await useMultiFileAuthState("./session");
 
     try {
-      let RobinPairWeb = makeWASocket({
+      let CyberAnuwhPair = makeWASocket({
         auth: {
           creds: state.creds,
           keys: makeCacheableSignalKeyStore(
@@ -38,18 +38,18 @@ router.get("/", async (req, res) => {
         browser: Browsers.macOS("Safari"),
       });
 
-      if (!RobinPairWeb.authState.creds.registered) {
+      if (!CyberAnuwhPair.authState.creds.registered) {
         await delay(1500);
         num = num.replace(/[^0-9]/g, "");
-        const code = await RobinPairWeb.requestPairingCode(num);
+        const code = await CyberAnuwhPair.requestPairingCode(num);
         if (!res.headersSent) {
           await res.send({ code });
         }
       }
 
-      RobinPairWeb.ev.on("creds.update", saveCreds);
+      CyberAnuwhPair.ev.on("creds.update", saveCreds);
 
-      RobinPairWeb.ev.on("connection.update", async (s) => {
+      CyberAnuwhPair.ev.on("connection.update", async (s) => {
         const { connection, lastDisconnect } = s;
         if (connection === "open") {
           try {
@@ -86,7 +86,7 @@ router.get("/", async (req, res) => {
             );
 
             // Wrap multi-line strings with backticks, and escape backslash in config.js path
-            const sid = `*✅ CXD-MD Session Connected Successfully!*\n\n🔐 *Session ID:* \n👉 ${string_session} 👈\n\n📌 *Please copy and paste this Session ID into your* \\config.js\\ *file to activate your bot.*\n\n💬 *Need help? Contact support:* \nhttps://wa.me/94715450089`;
+            const sid = `*✅ CYBER ANUWH MD V1 FREE BOT IS SUCCESSFULLY CONNECTED TO YOUR WHATSAPP NUMBER. THANK YOU FOR USING OUR SERVICE.!*\n\n🔐 *Session ID:* \n👉 ${string_session} 👈\n\n📌 *Please copy and paste this Session ID into your* \\config.js\\ *file to activate your bot.*\n\n💬 *Need help? Contact support:* \nhttps://wa.me/94715450089`;
 
             const mg = `⚠️ *Security Notice:*\n\n*Do NOT share this Session ID with anyone.*\n\n*මෙම කේතය කිසිවෙකුටත් ලබා නොදෙන්න. ඔබගේ ගිණුම සුරක්ෂිත විය යුතුය.*`;
 
@@ -138,3 +138,4 @@ process.on("uncaughtException", function (err) {
 });
 
 module.exports = router;
+
